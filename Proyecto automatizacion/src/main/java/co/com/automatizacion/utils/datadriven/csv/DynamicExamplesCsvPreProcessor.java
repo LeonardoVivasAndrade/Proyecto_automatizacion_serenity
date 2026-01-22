@@ -15,7 +15,7 @@ public class DynamicExamplesCsvPreProcessor {
     }
 
     public static void init() throws IOException {
-        String featureName = VARIABLES.getProperty("featureName");
+        String featureName = "todos";
         if (featureName != null && !featureName.isBlank()) {
             for(String feature : FeatureOverwrite.listFilesByFolder(featureName, new File(PathConstants.featurePath()))) {
                 if (feature.endsWith(".feature")) {
